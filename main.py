@@ -10,7 +10,7 @@ from install_dependencies import install_dependencies
 install_dependencies()
 
 # Define the directory for storing results
-results_dir = 'work/TrainData/026/results'
+results_dir = 'work/TrainData/001'
 os.makedirs(results_dir, exist_ok=True)
 
 # Perform data preprocessing
@@ -18,13 +18,15 @@ directory = "work/datasets/8class_100px"
 image_generator, X_train, X_test, y_train, y_test = data_preprocessing(directory)
 
 # Perform augmentation
-num_augmentations = 2
-batch_size = 128
-train_data_generator = image_generator.flow(X_train, y_train, batch_size=batch_size)
-X_test_augmented = image_generator.flow(X_test, batch_size=batch_size, shuffle=False)
+num_augmentations = 0
+
+batch_size = 4
+total_epochs = 12
+
+X_train_augmented, X_test_augmented, y_train_augmented, y_test_augmented, train_data_generator = perform_augmentation(directory, num_augmentations, image_generator,batch_size)
 
 # Train the model
-model, history = train_model(directory, train_data_generator, X_test_augmented, y_test, results_dir)
+model, history = train_model(directory, train_data_generator, X_test_augmented, y_test_augmented, results_dir, total_epochs)
 
 # Plot accuracy and loss and evaluate the model
-plot_and_evaluate(history, model, X_test_augmented, y_test, results_dir)
+plot_and_evaluate(history, model, X_test_augmented, y_test_augmented, results_dir)

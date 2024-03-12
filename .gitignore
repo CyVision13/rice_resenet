@@ -11,7 +11,8 @@ ENV/
 
 Scripts/*
 #dataset
-work/*
+work/TrainData/*
+work/
 # Distribution / packaging
 .Python
 build/

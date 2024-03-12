@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.utils import to_categorical
 
-def perform_augmentation(directory, num_augmentations, image_generator):
+def perform_augmentation(directory, num_augmentations, image_generator,batch_size):
     labels = []
     data = []
     train_data_count = 0  # Counter for data before augmentation
@@ -15,7 +15,6 @@ def perform_augmentation(directory, num_augmentations, image_generator):
 
     classes = sorted(os.listdir(directory))
     classes = [c for c in classes if len(c) <= 2]
-
     for class_name in classes:
         path = os.path.join(directory, class_name)
 
@@ -65,8 +64,8 @@ def perform_augmentation(directory, num_augmentations, image_generator):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    batch_size = 128  # Adjust the batch size as needed
-
+    batch_size = batch_size  # Adjust the batch size as needed
+    print('batch_size: '+ str(batch_size))
     train_data_generator = image_generator.flow(X_train, y_train, batch_size=batch_size)
 
     print("Data loaded after augmentation:")

@@ -6,7 +6,7 @@ import cv2
 def data_preprocessing(directory):
     classes = sorted(os.listdir(directory))
     classes = [c for c in classes if len(c) <= 2]
-    print("Number of classes:", classes)
+    print("Number of classes:", len(classes))
 
     data = []
     labels = []
