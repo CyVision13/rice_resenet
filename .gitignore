@@ -9,6 +9,8 @@ lib64/
 env/
 ENV/
 
+share/
+
 Scripts/*
 #dataset
 work/TrainData/*
