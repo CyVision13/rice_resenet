@@ -14,7 +14,7 @@ share/
 Scripts/*
 #dataset
 work/TrainData/*
-work/
+
 # Distribution / packaging
 .Python
 build/
