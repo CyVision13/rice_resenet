@@ -9,7 +9,7 @@ lib64/
 env/
 ENV/
 
-share/
+share/*
 
 Scripts/*
 #dataset
