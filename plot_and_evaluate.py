@@ -1,7 +1,12 @@
 import matplotlib.pyplot as plt
 import os
+import numpy as np
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
 
-def plot_and_evaluate(history, model, X_test, y_test, results_dir):
+def plot_and_evaluate(history, model, X_test, y_test, results_dir, directory):
+
+    classes = sorted(os.listdir(directory))
     # Plotting train loss and test loss
     train_loss = history.history['loss']
     test_loss = history.history['val_loss']
@@ -64,3 +69,23 @@ def plot_and_evaluate(history, model, X_test, y_test, results_dir):
     scores = model.evaluate(X_test, y_test, verbose=1)
     print('Test loss:', scores[0])
     print('Test accuracy:', scores[1])
+
+    # Predict the labels for the test set
+    y_pred = model.predict(X_test)
+    y_pred_classes = np.argmax(y_pred, axis=1)
+
+    # Create the confusion matrix
+    cm = confusion_matrix(np.argmax(y_test, axis=1), y_pred_classes)
+
+    # Print the confusion matrix
+    print("Confusion Matrix:")
+    print(cm)
+
+    # Plot the confusion matrix
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(cm, annot=True, fmt='g', cmap='Blues', xticklabels=classes, yticklabels=classes)
+    plt.title('Confusion Matrix')
+    plt.xlabel('Predicted')
+    plt.ylabel('Actual')
+    plt.savefig(os.path.join(results_dir, 'confusion_matrix.png'))
+    plt.show()

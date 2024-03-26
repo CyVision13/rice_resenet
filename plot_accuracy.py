@@ -19,7 +19,7 @@ def plot_accuracy(history, results_dir):
     # Adjust the spacing between subplots
     plt.tight_layout()
 
-    # Save the plot as an image
+    # Save the plot as an imagcm
     plt.savefig(os.path.join(results_dir, 'accuracy_plot.png'))
 
     # Show the plot

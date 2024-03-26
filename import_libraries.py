@@ -8,7 +8,7 @@ import matplotlib.image as mpimg
 
 plt.style.use('dark_background')
 
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from keras.layers import BatchNormalization
 from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten
 from keras.models import Sequential

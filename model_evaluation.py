@@ -4,6 +4,7 @@ from sklearn.metrics import confusion_matrix
 from tensorflow.keras.models import load_model
 import matplotlib.pyplot as plt
 
+ ###
 print('Loading Model')
 # Load the saved model
 model_path = 'work/TrainData/026/best_model.h5'

@@ -10,11 +10,11 @@ from install_dependencies import install_dependencies
 install_dependencies()
 
 # Define the directory for storing results
-results_dir = 'work/TrainData/001'
+results_dir = 'results/TrainData/001'
 os.makedirs(results_dir, exist_ok=True)
 
 # Perform data preprocessing
-directory = "work/datasets/8class_100px"
+directory = "data/datasets/8class_100px"
 image_generator, X_train, X_test, y_train, y_test = data_preprocessing(directory)
 
 # Perform augmentation
@@ -29,4 +29,4 @@ X_train_augmented, X_test_augmented, y_train_augmented, y_test_augmented, train_
 model, history = train_model(directory, train_data_generator, X_test_augmented, y_test_augmented, results_dir, total_epochs)
 
 # Plot accuracy and loss and evaluate the model
-plot_and_evaluate(history, model, X_test_augmented, y_test_augmented, results_dir)
+plot_and_evaluate(history, model, X_test_augmented, y_test_augmented, results_dir, directory)

@@ -34,6 +34,7 @@ parts/
 sdist/
 var/
 wheels/
+results/
 <<<<<<< HEAD
 share/python-wheels/
 =======
@@ -222,3 +223,6 @@ cython_debug/
 #.idea/
 =======
 >>>>>>> master
+
+
+.vscode

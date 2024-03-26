@@ -2,7 +2,7 @@ import os
 import cv2
 import numpy as np
 from sklearn.model_selection import train_test_split
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.utils import to_categorical
 
 def perform_augmentation(directory, num_augmentations, image_generator,batch_size):
