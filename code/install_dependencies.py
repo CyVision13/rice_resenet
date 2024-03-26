@@ -12,7 +12,7 @@ def install_dependencies():
     # Check if the OS is Linux
     if platform.system() == 'Linux':
         # Install required apt packages
-        apt_packages = ['libgl1-mesa-glx']
+        apt_packages = ['libgl1-mesa-glx','libglib2.0-0']
         subprocess.run(['apt-get', 'update'])
         subprocess.run(['apt-get', 'install', '-y'] + apt_packages)
 

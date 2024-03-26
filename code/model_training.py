@@ -18,7 +18,7 @@ def train_model(directory, train_data_generator, X_test, y_test, results_dir, to
 
     if use_pretrained_model:
         # Load the pre-trained ResNet-50 model without the top (classification) layer
-        base_model = ResNet50(weights='models/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5', include_top=False, input_shape=input_shape)
+        base_model = ResNet50(weights='./../data/models/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5', include_top=False, input_shape=input_shape)
     else:
         # Import your custom ResNet model
         # base_model = CustomResNet(input_shape=input_shape, num_classes=num_classes)

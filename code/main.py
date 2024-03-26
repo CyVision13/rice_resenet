@@ -10,11 +10,11 @@ from install_dependencies import install_dependencies
 install_dependencies()
 
 # Define the directory for storing results
-results_dir = 'results/TrainData/001'
+results_dir = './../results/TrainData/001'
 os.makedirs(results_dir, exist_ok=True)
 
 # Perform data preprocessing
-directory = "data/datasets/8class_100px"
+directory = "./../data/datasets/8class_100px"
 image_generator, X_train, X_test, y_train, y_test = data_preprocessing(directory)
 
 # Perform augmentation
