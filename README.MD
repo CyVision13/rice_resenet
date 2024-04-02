@@ -1,14 +1,19 @@
 # Rice ResNet Image Classification
 
 ## Description
-This project aims to classify images of rice grains using the Rice ResNet architecture for deep learning-based image classification.
+This project aims to classify images of rice grains using the Rice ResNet architecture for deep learning-based image classification. It has been developed and tested on CodeOcean, a cloud-based computational research platform.
+
+For replicating the experiments or running the code, you can access the CodeOcean capsule through the following DOI link: [10.24433/CO.7571202.v1](https://doi.org/10.24433/CO.7571202.v1).
+
 
 ## Related Article
 This project is related to the research article titled "Deep learning-based image classification of rice grains using Rice ResNet" published in Expert Systems with Applications. You can access the article through the following DOI link: [10.1016/j.eswa.2024.123276](https://doi.org/10.1016/j.eswa.2024.123276).
 
+
 For inquiries related to the article, you can contact the authors:
 - Mohammad Razavi: [m.r.razavi@outlook.com](mailto:m.r.razavi@outlook.com)
 - Samira Mavaddati: [s.mavaddati@umz.ac.ir](mailto:s.mavaddati@umz.ac.ir)
+- Ziad Kobti: [kobti@uwindsor.ca](mailto:kobti@uwindsor.ca)
 - Hamidreza Koohi: [koohi@shomal.ac.ir](mailto:koohi@shomal.ac.ir)
 
 ## Project Structure
