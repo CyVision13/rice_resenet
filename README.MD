@@ -14,7 +14,7 @@ For inquiries related to the article, you can contact the authors:
 - Mohammad Razavi: [m.r.razavi@outlook.com](mailto:m.r.razavi@outlook.com)
 - Samira Mavaddati: [s.mavaddati@umz.ac.ir](mailto:s.mavaddati@umz.ac.ir)
 - Ziad Kobti: [kobti@uwindsor.ca](mailto:kobti@uwindsor.ca)
-- Hamidreza Koohi: [koohi@shomal.ac.ir](mailto:koohi@shomal.ac.ir)
+- Hamidreza Koohi: [koohi@shomal.ac.ir](mailto:koohi@uwindsor.ca)
 
 ## Project Structure
 - `.idea/`: PyCharm project settings directory.
